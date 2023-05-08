@@ -12,26 +12,19 @@ namespace Clothes.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class SanPham
+    public partial class Brand
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SanPham()
+        public Brand()
         {
-            this.ChiTietDatHang = new HashSet<ChiTietDatHang>();
+            this.SanPham = new HashSet<SanPham>();
         }
     
-        public int MaSP { get; set; }
-        public string TenSP { get; set; }
-        public Nullable<decimal> GiaBan { get; set; }
-        public string NoiDung { get; set; }
-        public string AnhDD { get; set; }
-        public Nullable<int> SoLuongTon { get; set; }
-        public Nullable<int> MaParts { get; set; }
-        public Nullable<int> MaBrand { get; set; }
+        public int MaBrand { get; set; }
+        public string TenBrand { get; set; }
+        public string XuatXu { get; set; }
     
-        public virtual Brand Brand { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietDatHang> ChiTietDatHang { get; set; }
-        public virtual Parts Parts { get; set; }
+        public virtual ICollection<SanPham> SanPham { get; set; }
     }
 }

@@ -12,10 +12,15 @@ namespace Clothes.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Admin
+    public partial class ChiTietDatHang
     {
-        public string UserAdmin { get; set; }
-        public string PassAdmin { get; set; }
-        public string Hoten { get; set; }
+        public int ID { get; set; }
+        public int IDOrder { get; set; }
+        public int MaSP { get; set; }
+        public Nullable<int> SoLuong { get; set; }
+        public Nullable<decimal> DonGia { get; set; }
+    
+        public virtual DonDatHang DonDatHang { get; set; }
+        public virtual SanPham SanPham { get; set; }
     }
 }
